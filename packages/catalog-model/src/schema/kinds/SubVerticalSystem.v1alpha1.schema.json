@@ -1,0 +1,55 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "SubVerticalSystemV1alpha1",
+    "description": "Sub Vertical acts as System only but some verticals in the CNB organization may have sub verticals, for that there is a need to of a new kind of Sub Vertical",
+    "examples": [
+      {
+        "apiVersion": "backstage.io/v1alpha1",
+        "kind": "SubVertical",
+        "metadata": {
+          "name": "sub-vertical",
+          "description": "Creating a new Kind for Sub-Verticals."
+        },
+        "spec": {
+          "owner": "SRE-A",
+          "domain": "kpikri"
+        }
+      }
+    ],
+    "allOf": [
+      {
+        "$ref": "Entity"
+      },
+      {
+        "type": "object",
+        "required": ["spec"],
+        "properties": {
+          "apiVersion": {
+            "enum": ["backstage.io/v1alpha1", "backstage.io/v1beta1"]
+          },
+          "kind": {
+            "enum": ["SubVerticalSystem"]
+          },
+          "spec": {
+            "type": "object",
+            "required": ["owner"],
+            "properties": {
+              "owner": {
+                "type": "string",
+                "description": "An entity reference to the owner of the sub vertical.",
+                "examples": ["SRE-A", "user:john.johnson"],
+                "minLength": 1
+              },
+              "domain": {
+                "type": "string",
+                "description": "An entity reference to the domain that the sub vertical system belongs to.",
+                "examples": ["kpikri"],
+                "minLength": 1
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+  

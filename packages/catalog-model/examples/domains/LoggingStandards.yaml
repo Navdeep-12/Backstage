@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: loggingStandards
+  description: Applications under logging standards page for Leaderboard
+  title: Logging Standards
+spec:
+  owner: DEVOPS

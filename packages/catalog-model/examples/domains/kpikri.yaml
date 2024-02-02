@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: kpikri
+  description: KPI/KRI page on Leaderboard
+  title: KPI/KRI
+spec:
+  owner: DEVOPS

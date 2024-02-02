@@ -1,0 +1,33 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: NSKOP-B
+  description: Sub Application of Application NSKOP
+  annotations:
+    backstage.io/techdocs-ref: 'https://github.com/swagger-api/swagger-petstore'
+    backstage.io/source-location: 'url:https://github.com/swagger-api/swagger-petstore'
+  links:
+    - url: https://github.com/swagger-api/swagger-petstore
+      title: GitHub
+      icon: github
+    - url: https://github.com/swagger-api/swagger-petstore
+      title: Website
+      icon: Website
+    - url: https://github.com/swagger-api/swagger-petstore
+      title: Cloud
+      icon: cloud
+    - url: https://github.com/swagger-api/swagger-petstore
+      title: Group
+      icon: group
+    - url: https://github.com/swagger-api/swagger-petstore
+      title: User
+      icon: user
+spec:
+  type: Sub-Application
+  lifecycle: production
+  subcomponentOf: NSKOP
+  owner: SRE-B
+  dependsOn: ['component:NSKOP', 'resource:dynatrace', 'resource:elk']
+  providesApis:
+    - streetlights
+    - hello-world

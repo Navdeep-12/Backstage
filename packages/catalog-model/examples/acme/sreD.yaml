@@ -1,0 +1,44 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: SRE-D
+  description: It is the team of SREs
+  links:
+    - url: https://www.cnb.com/
+      title: WEBSITE
+      icon: website
+    - url: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/domains/artists-domain.yaml
+      title: GITHUB Repo
+      icon: github
+    - url: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/domains/artists-domain.yaml
+      title: Documentation
+      icon: doc
+spec:
+  type: team
+  profile:
+    displayName: SRE-D
+    email: team-d@example.com
+    picture: https://api.dicebear.com/7.x/identicon/svg?seed=Bailey&backgroundType=gradientLinear&backgroundColor=b6e3f4,ffd5dc,ffdfbf,c0aede
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: eva.macdowell
+spec:
+  profile:
+    displayName: Eva MacDowell (Business Owner)
+    email: eva-macdowell@example.com
+    picture: https://api.dicebear.com/7.x/avataaars/svg?seed=Cuddles
+  memberOf: [SRE-D]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: lucy.sheehan
+spec:
+  profile:
+    displayName: Lucy Sheehan (Technical Owner)
+    email: lucy-sheehan@example.com
+    picture: https://api.dicebear.com/7.x/avataaars/svg?seed=Snickers
+  memberOf: [SRE-D]

@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: DEVOPS
+  description: It is the team of DEVOPS that handles the verticals of the CNB side
+  links:
+    - url: https://www.cnb.com/
+      title: WEBSITE
+      icon: website
+    - url: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/domains/artists-domain.yaml
+      title: GITHUB Repo
+      icon: github
+    - url: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/domains/artists-domain.yaml
+      title: Documentation
+      icon: doc
+spec:
+  type: team
+  profile:
+    email: team-a@example.com
+    picture: https://api.dicebear.com/7.x/identicon/svg?seed=Fluffy&backgroundType=solid,gradientLinear&backgroundColor=ffd5dc,b6e3f4
+  children: []

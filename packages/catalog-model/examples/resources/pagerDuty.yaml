@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: PAGERDUTY
+  description: Monitoring tool for application across Verticals with Sub Applications and Sub Verticals
+  annotations:
+    backstage.io/techdocs-ref: https://github.com/swagger-api/swagger-petstore
+spec:
+  type: monitoring-tool
+  owner: CNB
+  system: [CORPORATE, LENDING, HORIZONTAL]

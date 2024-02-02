@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: CORPORATE
+  description: |
+    All required information about CORPORATE of domain KPI/KRI in Leaderbaord.
+
+    Corporate has sub-verticals for it whose links are mentioned below
+  
+    - [NS](http://localhost:3000/catalog/default/system/NS)
+    - [NSS](http://localhost:3000/catalog/default/system/NSS)
+  annotations:
+    backstage.io/techdocs-ref: 'https://github.com/swagger-api/swagger-petstore'
+    backstage.io/source-location: 'url:https://github.com/swagger-api/swagger-petstore'
+spec:
+  owner: SRE-A
+  domain: ['kpikri', 'loggingStandards']

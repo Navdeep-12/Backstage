@@ -1,0 +1,34 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: DSSEC-C
+  description: Sub Application of Application DSSEC
+  annotations:
+    backstage.io/techdocs-ref: 'https://github.com/swagger-api/swagger-petstore'
+    backstage.io/source-location: 'url:https://github.com/swagger-api/swagger-petstore'
+  links:
+    - url: https://github.com/swagger-api/swagger-petstore
+      title: GitHub
+      icon: github
+    - url: https://github.com/swagger-api/swagger-petstore
+      title: Website
+      icon: Website
+    - url: https://github.com/swagger-api/swagger-petstore
+      title: Cloud
+      icon: cloud
+    - url: https://github.com/swagger-api/swagger-petstore
+      title: Group
+      icon: group
+    - url: https://github.com/swagger-api/swagger-petstore
+      title: User
+      icon: user
+spec:
+  type: Sub-Application
+  lifecycle: production
+  owner: SRE-A
+  subcomponentOf: DSSEC
+  dependsOn: ['component:DSSEC', 'resource:dynatrace', 'resource:elk']
+  providesApis:
+    - petstore
+    - streetlights
+    - hello-world

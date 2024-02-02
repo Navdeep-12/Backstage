@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: DIGITAL
+  description: Some introduction for DIGITAL Vertical
+  links:
+    - url: https://www.cnb.com/
+      title: WEBSITE
+      icon: website
+spec:
+  type: vertical
+  profile:
+    displayName: DIGITAL
+    email: sreteam@example.com
+    picture: https://api.dicebear.com/7.x/identicon/svg?seed=Fluffy&backgroundColor=ffdfbf
+  children: [NS, NSS] # in here we can add the sub verticals for a vertical

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: LENDING
+  description: |
+    All required information about CORPORATE of domain KPI/KRI in Leaderbaord.
+
+    Corporate has sub-verticals for it whose links are mentioned below
+  
+    - [DA](http://localhost:3000/catalog/default/system/DA)
+    - [FD](http://localhost:3000/catalog/default/system/FD)
+  annotations:
+    backstage.io/techdocs-ref: 'https://github.com/swagger-api/swagger-petstore'
+    backstage.io/source-location: 'url:https://github.com/swagger-api/swagger-petstore'
+spec:
+  owner: SRE-C
+  domain: ['kpikri', 'loggingStandards']

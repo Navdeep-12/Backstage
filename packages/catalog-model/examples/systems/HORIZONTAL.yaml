@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: HORIZONTAL
+  description: |
+    All required information about CORPORATE of domain KPI/KRI in Leaderbaord.
+
+    Corporate has sub-verticals for it whose links are mentioned below
+  
+    - [IHA](http://localhost:3000/catalog/default/system/IHA)
+    - [IHO](http://localhost:3000/catalog/default/system/IHO)
+  annotations:
+    backstage.io/techdocs-ref: 'https://github.com/swagger-api/swagger-petstore'
+    backstage.io/source-location: 'url:https://github.com/swagger-api/swagger-petstore'
+spec:
+  owner: SRE-B
+  domain: ['kpikri', 'loggingStandards']

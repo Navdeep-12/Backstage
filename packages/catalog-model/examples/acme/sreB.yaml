@@ -1,0 +1,78 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: SRE-B
+  description: It is the team of SREs 
+  links:
+    - url: https://www.cnb.com/
+      title: WEBSITE
+      icon: website
+    - url: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/domains/artists-domain.yaml
+      title: GITHUB Repo
+      icon: github
+    - url: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/domains/artists-domain.yaml
+      title: Documentation
+      icon: doc
+spec:
+  type: team
+  profile:
+    displayName: SRE-B
+    email: team-b@example.com
+    picture: https://api.dicebear.com/7.x/identicon/svg?seed=Abby&backgroundType=solid,gradientLinear&backgroundColor=ffd5dc,b6e3f4
+  parent: SRE-A
+  children: [DEVOPS, SRE-D]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: amelia.park
+spec:
+  profile:
+    displayName: Amelia Park (Business Owner)
+    email: amelia-park@example.com
+    picture: https://api.dicebear.com/7.x/avataaars/svg?seed=Gizmo&backgroundColor=transparent
+  memberOf: [SRE-B]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: colette.brock
+spec:
+  profile:
+    displayName: Colette Brock
+    email: colette-brock@example.com
+    picture: https://api.dicebear.com/7.x/avataaars/svg?seed=Bailey&backgroundColor=transparent
+  memberOf: [SRE-B Team]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: jenny.doe
+spec:
+  profile:
+    displayName: Jenny Doe (Technical Owner)
+    email: jenny-doe@example.com
+    picture: https://api.dicebear.com/7.x/avataaars/svg?seed=Mimi&backgroundColor=transparent
+  memberOf: [SRE-B]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: jonathon.page
+spec:
+  profile:
+    displayName: Jonathon Page
+    email: jonathon-page@example.com
+    picture: https://api.dicebear.com/7.x/avataaars/svg?seed=Baby&backgroundColor=transparent
+  memberOf: [SRE-B]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: justine.barrow
+spec:
+  profile:
+    displayName: Justine Barrow (RBC)
+    email: justine-barrow@example.com
+    picture: https://api.dicebear.com/7.x/avataaars/svg?seed=Sassy&backgroundColor=transparent
+  memberOf: [SRE-B]

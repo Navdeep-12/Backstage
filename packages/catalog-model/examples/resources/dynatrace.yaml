@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: Dynatrace
+  description: Monitoring tool for application across Verticals with Sub Applications and Sub Verticals
+  annotations:
+    backstage.io/techdocs-ref: https://github.com/swagger-api/swagger-petstore
+spec:
+  type: monitoring-tool
+  owner: CNB
+  group: DIGITAL
+  system: [CORPORATE, LENDING, HORIZONTAL]
+

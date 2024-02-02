@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: FD
+  description: Sub vertical of LENDING
+  annotations:
+    backstage.io/techdocs-ref: 'https://github.com/swagger-api/swagger-petstore'
+    backstage.io/source-location: 'url:https://github.com/swagger-api/swagger-petstore'
+spec:
+  owner: SRE-C
+  domain: ['kpikri', 'loggingStandards']
+  dependsOn: ['resource:dynatrace', 'resource:elk']

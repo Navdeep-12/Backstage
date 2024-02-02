@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: example-systems
+  description: A collection of all Backstage example systems
+spec:
+  targets:
+    - ./systems/CORPORATE.yaml
+    - ./systems/NS.yaml
+    - ./systems/NSS.yaml
+    - ./systems/LENDING.yaml
+    - ./systems/FD.yaml
+    - ./systems/DA.yaml
+    - ./systems/HORIZONTAL.yaml
+    - ./systems/IHO.yaml
+    - ./systems/IHA.yaml

@@ -1,0 +1,44 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: SRE-C
+  description: It is the team of SREs
+  links:
+    - url: https://www.cnb.com/
+      title: WEBSITE
+      icon: website
+    - url: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/domains/artists-domain.yaml
+      title: GITHUB Repo
+      icon: github
+    - url: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/domains/artists-domain.yaml
+      title: Documentation
+      icon: doc
+spec:
+  type: team
+  profile:
+    displayName: SRE-C
+    email: team-c@example.com
+    picture: https://api.dicebear.com/7.x/identicon/svg?seed=Loki&backgroundType=gradientLinear&backgroundColor=b6e3f4,ffd5dc,ffdfbf,c0aede
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: sarah.gilroy
+spec:
+  profile:
+    displayName: Sarah Gilroy (Business Owner)
+    email: sarah-gilroy@example.com
+    picture: https://api.dicebear.com/7.x/avataaars/svg?seed=Rascal
+  memberOf: [SRE-C]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: tara.macgovern
+spec:
+  profile:
+    displayName: Tara MacGovern (Technical Owner)
+    email: tara-macgovern@example.com
+    picture: https://api.dicebear.com/7.x/avataaars/svg?seed=Jasmine
+  memberOf: [SRE-C]

@@ -1,0 +1,31 @@
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: navdeep-12
+spec:
+  memberOf: [SRE-A]
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: guests
+spec:
+  type: team
+  children: []
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-vertical
+apiVersion: backstage.io/v1alpha1
+kind: Vertical
+metadata:
+  name: DIGITAL
+  description: Some introduction for DIGITAL Vertical
+spec:
+  type: vertical
+  profile:
+    displayName: DIGITAL
+    email: sreteam@example.com
+    picture: https://api.dicebear.com/7.x/identicon/svg?seed=Fluffy&backgroundColor=ffdfbf
+  children: [team-a, team-b] # in here we can add the sub verticals for a vertical

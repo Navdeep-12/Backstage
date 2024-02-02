@@ -1,0 +1,26 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: example-components
+  description: A collection of all Backstage example components
+spec:
+  targets:
+    - ./components/DSSEC.yaml
+    - ./components/DSSEC-A.yaml
+    - ./components/DSSEC-B.yaml
+    - ./components/DSSEC-C.yaml
+    - ./components/DSSEC-D.yaml
+    - ./components/NASST.yaml
+    - ./components/NCRRP.yaml
+    - ./components/NSKOP.yaml
+    - ./components/NSKOP-A.yaml
+    - ./components/NSKOP-B.yaml
+    - ./components/PPSAT.yaml
+    - ./components/CRINV.yaml
+    - ./components/CNBID.yaml
+    - ./components/OGNOU.yaml
+    - ./components/WMEMO.yaml
+    - ./components/SNOW0.yaml
+    - ./components/A6P7Z.yaml
+    - ./components/COGNI.yaml
+  

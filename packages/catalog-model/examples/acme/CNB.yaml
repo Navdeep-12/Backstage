@@ -1,0 +1,45 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: CNB
+  description: It is the team of CNB SREs
+  links:
+    - url: https://www.cnb.com/
+      title: WEBSITE
+      icon: website
+    - url: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/domains/artists-domain.yaml
+      title: GITHUB Repo
+      icon: github
+    - url: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/domains/artists-domain.yaml
+      title: Documentation
+      icon: doc
+spec:
+  type: team
+  profile:
+    email: CNB@example.com
+    picture: https://api.dicebear.com/7.x/identicon/svg?seed=Fluffy&backgroundType=solid,gradientLinear&backgroundColor=ffd5dc,b6e3f4
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: murshid.dingrha
+spec:
+  profile:
+    displayName: Murshid Dhingra (Business Owner)
+    email: murshid@example.com
+    picture: https://api.dicebear.com/7.x/avataaars/svg?seed=Sassy&backgroundColor=transparent
+  memberOf: [CNB]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: singh.manny
+spec:
+  profile:
+    displayName: Manny Singh (Technical Owner)
+    email: manny.singh@example.com
+    picture: https://api.dicebear.com/7.x/avataaars/svg?seed=Sassy&backgroundColor=transparent
+  memberOf: [CNB]
+---
+

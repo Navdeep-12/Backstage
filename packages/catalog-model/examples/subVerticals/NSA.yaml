@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: SubVerticalSystem
+metadata:
+  name: NSA
+  description: Sub vertical of Corporate
+  annotations:
+    backstage.io/techdocs-ref: 'https://github.com/swagger-api/swagger-petstore'
+    backstage.io/source-location: 'url:https://github.com/swagger-api/swagger-petstore'
+spec:
+  owner: SRE-A
+  domain: kpikri
