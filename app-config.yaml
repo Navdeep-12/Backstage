@@ -29,9 +29,9 @@ backend:
   # Used for enabling authentication, secret is shared by all backend plugins
   # See https://backstage.io/docs/auth/service-to-service-auth for
   # information on the format
-  auth:
-    keys:
-      - secret: 'nmrdJCltPSlkHwawKvpuX+lVQ3/fqJi4'
+  # auth:
+  #   keys:
+  #     - secret: ${BACKEND_SECRET}
   baseUrl: http://localhost:7007
   listen:
     port: 7007
@@ -235,7 +235,6 @@ catalog:
         - System
         - Domain
         - Location
-        - SubVerticalSystem
   providers:
     openapi:
       plugins:
@@ -265,26 +264,37 @@ catalog:
   locations:
     # Add a location here to ingest it, for example from a URL:
     #
-    # - type: url
-      # target: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/all.yaml
+    # type: url
+    # target: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/all.yaml
+    #      # https://github.com/Navdeep-12/Backstage/blob/main/packages/catalog-model/examples/all.yaml
+    # For local development you can use a file location instead:
+    #
+    #     - type: file
+    #       target: ../catalog-model/examples/all-components.yaml
+    #
+    # File locations are relative to the current working directory of the
+    # backend, for example packages/backend/.
 
     # Backstage example entities
     - type: file
+      target: ./catalog-info.yaml
+
+    - type: file
       target: ../catalog-model/examples/all.yaml
-       #Backstage example groups and users
+    # Backstage example groups and users
     - type: file
       target: ../catalog-model/examples/acme-corp.yaml
       rules:
         - allow: [User, Group]
     # Example component for github-actions and TechDocs
-    #- type: file
-    #  target: ../../plugins/github-actions/examples/sample.yaml
-    # Example component for TechDocs
-    #- type: file
-    #  target: ../../plugins/techdocs-backend/examples/documented-component/catalog-info.yaml
-    # Example component for ADRs
-   # - type: file
-   #   target: ../../plugins/adr/examples/component/catalog-info.yaml
+  #  - type: file
+  #    target: ../../plugins/github-actions/examples/sample.yaml
+  #  # Example component for TechDocs
+  #  - type: file
+  #    target: ../../plugins/techdocs-backend/examples/documented-component/catalog-info.yaml
+  #  # Example component for ADRs
+  #  - type: file
+  #    target: ../../plugins/adr/examples/component/catalog-info.yaml
     # Backstage example templates
     - type: file
       target: ../../plugins/scaffolder-backend/sample-templates/all-templates.yaml
@@ -320,7 +330,7 @@ auth:
     github:
       development:
         clientId: c6d99b56152950f03914
-        clientSecret: 4e604239625e299257559f04a2f788b0c215ee29
+        clientSecret: 5330fef75d7ab8fd30fb84f2027566091bcc0d14
     gitlab:
       development:
         clientId: ${AUTH_GITLAB_CLIENT_ID}

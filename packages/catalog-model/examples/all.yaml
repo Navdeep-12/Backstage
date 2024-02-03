@@ -11,3 +11,4 @@ spec:
     - ./all-resources.yaml
     - ./all-systems.yaml
     - ./all-subVerticals.yaml
+    - ./acme-corp.yaml
