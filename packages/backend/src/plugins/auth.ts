@@ -51,14 +51,14 @@ export default async function createPlugin(
 
             const userEntityRef = stringifyEntityRef({
               kind: 'User',
-              name: userId,
+              name: 'navdeep.singh',
               namespace: DEFAULT_NAMESPACE,
             });
 
             return ctx.issueToken({
               claims: {
                 sub: userEntityRef,
-                ent: [userEntityRef,'user:default/navdeep-12','group:default/SRE-A'],
+                ent: [userEntityRef,'user:default/navdeep.singh','group:default/SRE-A'],
               },
             });
           },

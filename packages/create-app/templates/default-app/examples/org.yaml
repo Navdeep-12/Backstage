@@ -2,7 +2,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
-  name: navdeep-12
+  name: naveep.singh
 spec:
   memberOf: [SRE-A]
 

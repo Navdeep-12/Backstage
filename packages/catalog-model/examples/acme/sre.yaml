@@ -59,7 +59,7 @@ metadata:
   name: navdeep.singh
 spec:
   profile:
-    displayName: navdeep-12
+    displayName: navdeep.singh
     email: navdeep.singh@example.com
     picture: https://api.dicebear.com/7.x/avataaars/svg?seed=Midnight&backgroundColor=transparent
   memberOf: [SRE-A]
