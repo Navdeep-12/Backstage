@@ -272,7 +272,7 @@ catalog:
 
     # Groups
     - type: url
-      target: https://github.com/Navdeep-12/Backstage/blob/main/packages/catalog-model/examples/acme/org.yaml
+      target: https://github.com/Navdeep-12/Backstage/blob/main/packages/catalog-model/examples/acme-corp.yaml
 
     # Resources
     - type: url
