@@ -25,7 +25,7 @@ metadata:
 spec:
   type: Website
   lifecycle: production
-  owner: user:navdeep-12
+  owner: user:navdeep.singh
   system: LENDING
   dependsOn: ['resource:dynatrace', 'resource:elk']
   providesApis:
