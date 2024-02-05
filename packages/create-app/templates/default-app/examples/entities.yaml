@@ -7,14 +7,6 @@ metadata:
 spec:
   owner: [DIGITAL]
 ---
-# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-subverticals
-apiVersion: backstage.io/v1alpha1
-kind: SubVerticalSystem
-metadata:
-  name: exasub-verticals-emples
-spec:
-  owner: guests
----
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
 apiVersion: backstage.io/v1alpha1
 kind: Component
