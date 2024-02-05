@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ASN-02
+  annotations:
+    github.com/project-slug: Navdeep-12/Backstage
+spec:
+  type: other
+  lifecycle: unknown
+  owner: SRE-A
