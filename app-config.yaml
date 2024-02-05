@@ -262,34 +262,34 @@ catalog:
       #         filter: (&(objectClass=some-group-class)(!(groupType=email)))
 
   locations:
-    # Add a location here to ingest it, for example from a URL:
-    #
+    # Components
     - type: url
-      target: https://github.com/Navdeep-12/Backstage/blob/main/packages/catalog-model/examples/all.yaml
-    # For local development you can use a file location instead:
-    #
-    #     - type: file
-    #       target: ../catalog-model/examples/all-components.yaml
-    #
-    # File locations are relative to the current working directory of the
-    # backend, for example packages/backend/.
+      target: https://github.com/Navdeep-12/Backstage/blob/main/packages/catalog-model/examples/all-components.yaml
 
-    # Backstage example entities
-    # Backstage example groups and users
-    - type: file
-      target: ../catalog-model/examples/acme-corp.yaml
-      rules:
-        - allow: [User, Group]
-    # Example component for github-actions and TechDocs
-  #  - type: file
-  #    target: ../../plugins/github-actions/examples/sample.yaml
-  #  # Example component for TechDocs
-  #  - type: file
-  #    target: ../../plugins/techdocs-backend/examples/documented-component/catalog-info.yaml
-  #  # Example component for ADRs
-  #  - type: file
-  #    target: ../../plugins/adr/examples/component/catalog-info.yaml
-    # Backstage example templates
+    # Systems
+    - type: url
+      target: https://github.com/Navdeep-12/Backstage/blob/main/packages/catalog-model/examples/all-systems.yaml
+
+    # Groups
+    - type: url
+      target: https://github.com/Navdeep-12/Backstage/blob/main/packages/catalog-model/examples/acme/org.yaml
+
+    # Resources
+    - type: url
+      target: https://github.com/Navdeep-12/Backstage/blob/main/packages/catalog-model/examples/all-resources.yaml
+
+    # Domains
+    - type: url
+      target: https://github.com/Navdeep-12/Backstage/blob/main/packages/catalog-model/examples/all-domains.yaml
+
+    # APIs
+    - type: url
+      target: https://github.com/Navdeep-12/Backstage/blob/main/packages/catalog-model/examples/all-apis.yaml
+
+    # For adding existing applications to Backstage
+    - type: url
+      target: https://github.com/Navdeep-12/Backstage/blob/main/catalog-info.yaml 
+      
     - type: file
       target: ../../plugins/scaffolder-backend/sample-templates/all-templates.yaml
       rules:
