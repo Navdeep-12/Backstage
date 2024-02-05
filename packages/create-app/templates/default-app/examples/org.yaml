@@ -11,21 +11,144 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: guests
+  name: sre-a
+  description: It is the team of SREs
+  links:
+    - url: https://www.cnb.com/
+      title: WEBSITE
+      icon: website
+    - url: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/domains/artists-domain.yaml
+      title: GITHUB Repo
+      icon: github
+    - url: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/domains/artists-domain.yaml
+      title: Documentation
+      icon: doc
 spec:
   type: team
+  profile:
+    email: team-a@example.com
+    picture: https://api.dicebear.com/7.x/identicon/svg?seed=Fluffy&backgroundType=solid,gradientLinear&backgroundColor=ffd5dc,b6e3f4
   children: []
 ---
-# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-vertical
 apiVersion: backstage.io/v1alpha1
-kind: Vertical
+kind: User
 metadata:
-  name: DIGITAL
-  description: Some introduction for DIGITAL Vertical
+  name: breanna.davison
 spec:
-  type: vertical
   profile:
-    displayName: DIGITAL
-    email: sreteam@example.com
-    picture: https://api.dicebear.com/7.x/identicon/svg?seed=Fluffy&backgroundColor=ffdfbf
-  children: [team-a, team-b] # in here we can add the sub verticals for a vertical
+    displayName: Janelle Dawe (Business Owner)
+    email: breanna-davison@example.com
+    picture: https://api.dicebear.com/7.x/avataaars/svg?seed=Luna&backgroundColor=transparent
+  memberOf: [SRE-A]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: janelle.dawe
+spec:
+  profile:
+    displayName: Janelle Dawe
+    email: janelle-dawe@example.com
+    picture: https://api.dicebear.com/7.x/avataaars/svg?seed=Leo&backgroundColor=transparent
+  memberOf: [SRE-A]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: nigel.manning
+spec:
+  profile:
+    displayName: Nigel Manning (Technical Owner)
+    email: nigel-manning@example.com
+    picture: https://api.dicebear.com/7.x/avataaars/svg?seed=Midnight&backgroundColor=transparent
+  memberOf: [SRE-A]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: navdeep.singh
+spec:
+  profile:
+    displayName: navdeep-12
+    email: navdeep.singh@example.com
+    picture: https://api.dicebear.com/7.x/avataaars/svg?seed=Midnight&backgroundColor=transparent
+  memberOf: [SRE-A]
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: SRE-B
+  description: It is the team of SREs 
+  links:
+    - url: https://www.cnb.com/
+      title: WEBSITE
+      icon: website
+    - url: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/domains/artists-domain.yaml
+      title: GITHUB Repo
+      icon: github
+    - url: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/domains/artists-domain.yaml
+      title: Documentation
+      icon: doc
+spec:
+  type: team
+  profile:
+    displayName: SRE-B
+    email: team-b@example.com
+    picture: https://api.dicebear.com/7.x/identicon/svg?seed=Abby&backgroundType=solid,gradientLinear&backgroundColor=ffd5dc,b6e3f4
+  parent: SRE-A
+  children: [DEVOPS, SRE-D]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: amelia.park
+spec:
+  profile:
+    displayName: Amelia Park (Business Owner)
+    email: amelia-park@example.com
+    picture: https://api.dicebear.com/7.x/avataaars/svg?seed=Gizmo&backgroundColor=transparent
+  memberOf: [SRE-B]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: colette.brock
+spec:
+  profile:
+    displayName: Colette Brock
+    email: colette-brock@example.com
+    picture: https://api.dicebear.com/7.x/avataaars/svg?seed=Bailey&backgroundColor=transparent
+  memberOf: [SRE-B Team]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: jenny.doe
+spec:
+  profile:
+    displayName: Jenny Doe (Technical Owner)
+    email: jenny-doe@example.com
+    picture: https://api.dicebear.com/7.x/avataaars/svg?seed=Mimi&backgroundColor=transparent
+  memberOf: [SRE-B]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: jonathon.page
+spec:
+  profile:
+    displayName: Jonathon Page
+    email: jonathon-page@example.com
+    picture: https://api.dicebear.com/7.x/avataaars/svg?seed=Baby&backgroundColor=transparent
+  memberOf: [SRE-B]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: justine.barrow
+spec:
+  profile:
+    displayName: Justine Barrow (RBC)
+    email: justine-barrow@example.com
+    picture: https://api.dicebear.com/7.x/avataaars/svg?seed=Sassy&backgroundColor=transparent
+  memberOf: [SRE-B]

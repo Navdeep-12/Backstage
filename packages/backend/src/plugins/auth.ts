@@ -58,7 +58,7 @@ export default async function createPlugin(
             return ctx.issueToken({
               claims: {
                 sub: userEntityRef,
-                ent: [userEntityRef,'user:default/navdeep-12','group:default/sre-a'],
+                ent: [userEntityRef,'user:default/navdeep-12','group:default/SRE-A'],
               },
             });
           },

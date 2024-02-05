@@ -19,7 +19,7 @@ import {
 import { Router } from 'express';
 import { PluginEnvironment } from '../types';
 import { catalogConditions, createCatalogConditionalDecision } from '@backstage/plugin-catalog-backend/alpha';
-import { catalogEntityDeletePermission } from '@backstage/plugin-catalog-common/alpha';
+import { catalogEntityDeletePermission, catalogEntityReadPermission } from '@backstage/plugin-catalog-common/alpha';
 
 class ExamplePermissionPolicy implements PermissionPolicy {
 
@@ -52,34 +52,6 @@ class ExamplePermissionPolicy implements PermissionPolicy {
         }
       }
      }
-
-
-    // LOGIC for not allowing user to delete a entity
-    //lets say there is a user who is not part of the team but has been given the access to just
-    // view the application will not be able to delete any entity
-
-    // if(user === undefined){
-    //   if(request && request.permission.name === 'catalog.entity.delete'){
-    //    return { result : AuthorizeResult.DENY}
-    //    } 
-    // }
-
-
-    // LOGIC for not deleting and refreshing the component user gets into 
-    // if (user === undefined) {
-    //   const requestName = request.permission.name
-    //   const deletition = requestName === 'catalog.entity.delete'
-    //   const update = requestName === 'catalog.entity.refresh'
-    //   if (deletition) {
-    //     console.log("inside delete if conition------------")
-    //     return { result: AuthorizeResult.DENY }
-    //   }
-
-    //   if (update) {
-    //     console.log("inside update if conition------------")
-    //     return { result: AuthorizeResult.DENY }
-    //   }
-    // }
 
 
     return {
