@@ -52,14 +52,14 @@ class ExamplePermissionPolicy implements PermissionPolicy {
           );       
         }
        //owner allowed to see entites that he owns
-       // if(isPermission(request.permission , catalogEntityReadPermission)){
-       //   return createCatalogConditionalDecision(
-       //     request.permission,
-       //     catalogConditions.isEntityOwner({
-       //       claims: user?.identity.ownershipEntityRefs ?? [],
-       //     }),
-       //   );       
-       // }
+        if(isPermission(request.permission , catalogEntityReadPermission)){
+          return createCatalogConditionalDecision(
+            request.permission,
+            catalogConditions.isEntityOwner({
+              claims: user?.identity.ownershipEntityRefs ?? [],
+            }),
+          );       
+        }
       }
      }
 
