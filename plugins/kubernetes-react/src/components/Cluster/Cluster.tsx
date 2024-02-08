@@ -164,11 +164,11 @@ export const Cluster = ({ clusterObjects, podsWithErrors }: ClusterProps) => {
                       <ServicesAccordions />
                     </Grid>
                   ) : undefined}
-                  {groupedResponses.cronJobs.length > 0 ? (
+                  {/* {groupedResponses.cronJobs.length > 0 ? (
                     <Grid item>
                       <CronJobsAccordions />
                     </Grid>
-                  ) : undefined}
+                  ) : undefined} */}
                 </Grid>
               </AccordionDetails>
             </Accordion>
